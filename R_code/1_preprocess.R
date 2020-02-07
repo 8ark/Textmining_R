@@ -1,12 +1,12 @@
 rm(list =ls())
 
-setwd('~/assembly_record/Textmining_R/law')
+setwd('C:/Users/ycg00/Documents/Textmining_R/law')
 
 pkgs <- c('dplyr','tidyr','stringr','tm')
 sapply(pkgs,require,character.only = TRUE)
 
 
-src_dir <-c("~/assembly_record/Textmining_R/law")
+src_dir <-c("C:/Users/ycg00/Documents/Textmining_R/law")
 src_dir
 
 src_file <-list.files(src_dir)
@@ -51,7 +51,7 @@ for (i in 1:src_file_cnt) {
                     ment = ment)
   
   write.table(res,
-              paste(src_dir, "/", "~/assembly_record/Textmining_R/editing/law_all.txt", sep = ""),
+              paste(src_dir, "/", "law_all.txt", sep = ""),
               sep = "\t",
               row.names = F,
               col.names = F,
