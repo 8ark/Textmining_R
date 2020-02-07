@@ -7,7 +7,8 @@ df <- read.csv("C:/Users/ycg00/Documents/Textmining_R/law/law_all.txt",
                  sep = "\t",
                  header = F)
 
-head(df)
+
+View(df)
 
 
 library(stringr)

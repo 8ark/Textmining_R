@@ -16,7 +16,6 @@ src_file_cnt <- length(src_file)
 src_file_cnt
 
 
-
 for (i in 1:src_file_cnt) {
   
   df <- readLines(paste(src_dir, "/", src_file[i], sep = ""))
