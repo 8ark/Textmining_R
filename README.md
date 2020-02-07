@@ -19,71 +19,22 @@
 ## 전처리
 ![](/image/전처리.png)
 
-데이터 출처:
+전처리 과정:
 PDF 파일은 전처리에 어려움이 있어 HWP로 다운로드 한 파일을 txt로 재저장한 파일을 시작데이터로 사용. 국회회의록 사이트 내에서 문서화된 회의록 데이터를 다운로드. 특정 이슈를 고려해 해당 기간 내의 회의록만 다운로드. PDF 파일은 전처리에 어려움이 있어 HWP로 다운로드 한 파일을 txt로 재저장한 파일을 분석 데이터로 사용.
 
-OS X & 리눅스:
 
-```sh
-npm install my-crazy-module --save
-```
+## 시각화
 
-윈도우:
+![](/image/시각화_1.png)
 
-```sh
-edit autoexec.bat
-```
+시각화 관련_1:
+각 정당 별 주요 단어를 정렬. 그래프로 보기좋게 나열
+더불어민주당은 주로 '문제', '자유한국당', '방해' 등의 단어가 있는 것으로 보아 '자유한국당이 방해하고 문제'라고 보는 듯하다.
+자유한국당은 '오늘', '우리', '때문', '오신환' 등으로 보아 '오늘 회의가 우리 때문에 안 되는 거냐'와 '오신환 의원한테 발언권 달라' 는 내용을 많이 언급한 듯하다.
+바른미래당은 '발언권', '불법', '존경' 등으로 보아 '발언권을 달라'(오신환 의원이 사보임 때문에 발언권 잃었음)는 것과 '패스트트랙이 불법'이라는 것을 어필한 듯 하다.
+마지막으로 정의-민주평화(교섭단체, 실질적으로 이 회의에서는 민주평화만 있었음)당은 특색이 없다. 발언 데이터도 3문단만 있다. 어느 당에도 눈총 안 받고 끝내고 싶었던 걸까.
 
-## 사용 예제
+![](/image/시각화_2.png)
 
-스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
-
-_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
-
-## 개발 환경 설정
-
-모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
-
-```sh
-make install
-npm test
-```
-
-## 업데이트 내역
-
-* 0.2.1
-    * 수정: 문서 업데이트 (모듈 코드 동일)
-* 0.2.0
-    * 수정: `setDefaultXYZ()` 메서드 제거
-    * 추가: `init()` 메서드 추가
-* 0.1.1
-    * 버그 수정: `baz()` 메서드 호출 시 부팅되지 않는 현상 (@컨트리뷰터 감사합니다!)
-* 0.1.0
-    * 첫 출시
-    * 수정: `foo()` 메서드 네이밍을 `bar()`로 수정
-* 0.0.1
-    * 작업 진행 중
-
-## 정보
-
-이름 – [@트위터 주소](https://twitter.com/dbader_org) – 이메일주소@example.com
-
-XYZ 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할 수 있습니다.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## 기여 방법
-
-1. (<https://github.com/yourname/yourproject/fork>)을 포크합니다.
-2. (`git checkout -b feature/fooBar`) 명령어로 새 브랜치를 만드세요.
-3. (`git commit -am 'Add some fooBar'`) 명령어로 커밋하세요.
-4. (`git push origin feature/fooBar`) 명령어로 브랜치에 푸시하세요. 
-5. 풀리퀘스트를 보내주세요.
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+워드클라우드:
+위 그래프를 워드클라우드로 바꿔보았다. 정작 보기는 어렵다.
